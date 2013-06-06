@@ -1,0 +1,52 @@
+#header {
+	height: 60px;
+}
+
+.header {
+	margin: 0 auto;
+	width: 70%;
+	height: 60px;
+}
+
+.header.left {
+	float: left;
+	width: 50%;
+}
+.header.right {
+	float: right;
+	width: 50%;
+}
+
+.logo {
+	width: 350px;
+	height: 60px;
+}
+
+#footer {
+	height: 45px;
+	background: #3498DB;
+}
+.navbar-inner {
+	border-radius: 0;
+}
+
+#container {
+	width: 80%;
+	margin: 0 auto;
+	height: auto;
+}
+
+#left-content {
+	margin: 0 auto;
+	position: relative;
+	float: left;
+	width: 20%;
+	min-height: 100px;
+}
+
+#main-content {
+	position: relative;
+	float: left;
+	width: 70%;
+	min-height: 100px;
+}

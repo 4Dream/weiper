@@ -1,0 +1,135 @@
+<?php
+/**
+ *
+ * PHP 5
+ *
+ * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
+ * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ *
+ * Licensed under The MIT License
+ * For full copyright and license information, please see the LICENSE.txt
+ * Redistributions of files must retain the above copyright notice.
+ *
+ * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @link          http://cakephp.org CakePHP(tm) Project
+ * @package       app.View.Layouts
+ * @since         CakePHP(tm) v 0.10.0.1076
+ * @license       http://www.opensource.org/licenses/mit-license.php MIT License
+ */
+
+$cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<?php echo $this->Html->charset(); ?>
+	<title>
+		<?php echo $cakeDescription ?>:
+		<?php echo $title_for_layout; ?>
+	</title>
+	<?php
+		echo $this->Html->meta('icon');
+
+		echo $this->Html->css('cake.generic');
+		echo $this->Html->css('../bootstrap/css/bootstrap');
+		echo $this->Html->css('flat-ui');
+		echo $this->Html->css('jq.default');
+		// echo $this->fetch('meta');
+		// echo $this->fetch('css');
+		// echo $this->fetch('script');
+	?>
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+			<?php echo $this->Html->css('html5shiv'); ?>
+    <![endif]-->
+</head>
+<body>
+	<div id="header">
+		<div class="header">
+			<div class="header left"><img class="logo" src="images/logo.png" /></div>
+			<div class="header right">TEST</div>
+		</div>
+	</div>
+	<div class="navbar navbar-inverse">
+		<div class="navbar-inner">
+			<div class="nav-collapse collapse">
+				<ul class="nav">
+					<li>
+						<a href="#">
+							首页
+						</a>
+					</li>
+					<li class="active">
+						<a href="#">
+							营销页面
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							营销活动
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							素材管理
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							群发消息
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							设置
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							数据统计
+						</a>
+					</li>
+					<li>
+						<a href="/weiper/helps">
+							帮助中心
+						</a>
+					</li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</div>
+	<div id="container">
+		<div id="left-content">
+		</div>
+		<div id="main-content">
+			<?php echo $this->Session->flash(); ?>
+			<?php echo $this->fetch('content'); ?>
+		</div>
+	</div>
+	
+	<div id="footer">
+		<?php echo $this->Html->link(
+				$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
+				'http://www.weiper.com',
+				array('target' => '_blank', 'escape' => false)
+			);
+		?>
+	</div>
+	<?php
+		echo $this->Html->script('jquery-1.8.3.min.js');
+		echo $this->Html->script('jquery-ui-1.10.3.custom.min.js');
+		echo $this->Html->script('jquery.ui.touch-punch.min.js');
+		echo $this->Html->script('jquery.ui.touch-punch.min.js');
+		echo $this->Html->script('bootstrap.min.js');
+		echo $this->Html->script('bootstrap-select.js');
+		echo $this->Html->script('bootstrap-switch.js');
+		echo $this->Html->script('flatui-checkbox.js');
+		echo $this->Html->script('flatui-radio.js');
+		echo $this->Html->script('jquery.tagsinput.js');
+		echo $this->Html->script('jquery.placeholder.js');
+		echo $this->Html->script('jquery.stacktable.js');
+		echo $this->Html->script('application.js');
+		echo $this->element('sql_dump'); 
+	?>
+</body>
+</html>
